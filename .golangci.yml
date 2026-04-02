@@ -102,10 +102,6 @@ linters: # https://golangci-lint.run/docs/configuration/file/#linters-configurat
       require-explanation: true
       require-specific: true
  
-    perfsprint:
-      # Go 1.26 optimized fmt.Errorf to use errors.New internally.
-      errorf: false
- 
   exclusions:
     presets:
       - common-false-positives
@@ -119,6 +115,8 @@ linters: # https://golangci-lint.run/docs/configuration/file/#linters-configurat
     rules:
       - path: ".*_test\\.go$"
         linters:
+          - funlen
+          - cyclop
           - gocritic
           - errcheck
  
