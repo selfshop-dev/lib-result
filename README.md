@@ -154,18 +154,6 @@ user, err := r.ToGoTyped() // (T, E) — без type assertion
 value, ok := r.Option()    // (T, bool) — ошибка отбрасывается
 ```
 
-## Makefile
-
-Основные возможности:
-
-| Цель | Описание |
-|---|---|
-| `make code-gen` | Запустить `go generate ./...` |
-| `make lint` | Запустить golangci-lint |
-| `make test` | Генерация кода + тесты с coverage |
-| `make prof` | Собрать профили (cpu, mem, block, mutex) |
-| `make prof-view` | Открыть профиль в браузере (`FILE=cpu.out` по умолчанию) |
-
 ## Лицензия
 
 [`MIT`](LICENSE) © 2026-present [`selfshop-dev`](https://github.com/selfshop-dev)
